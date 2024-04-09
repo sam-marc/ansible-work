@@ -1,0 +1,11 @@
+---
+- name: Under Maintenance
+  hosts: n2
+  become: yes
+
+  tasks:
+  - name: update maintenance
+    cope:
+      src: Maintenance.html 
+      dest: /var/www/html/
+...      
