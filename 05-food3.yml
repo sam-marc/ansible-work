@@ -13,6 +13,6 @@
 
   - name: Host Code
     git:
-      repo: https://github.com/CeeyIT-Solutions/frontend3.git
+      repo: https://github.com/CeeyIT-Solutions/food3.git
       dest: /var/www/html/
 ...      
