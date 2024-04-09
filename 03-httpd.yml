@@ -6,11 +6,11 @@
 
   tasks:
   - name: Install HTTPD
-    service:
+    yum:
       name: httpd 
       state: present
 
-  - name: start httpd
+  - name: Start httpd
     service:
       name: httpd
       state: started
