@@ -1,6 +1,6 @@
 ---
 - name: Under Maintenance
-  hosts: n2
+  hosts: n3
   become: yes
 
   tasks:
