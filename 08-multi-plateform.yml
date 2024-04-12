@@ -57,4 +57,22 @@
       name: httpd
       enabled: yes 
     when: ansible_distribution == "centos" 
+
+  - name: Install HTTPD on Window
+    win:
+      name: httpd
+      state: present
+    when: ansible_distribution == "Window" 
+
+  - name: Start Httpd on Centos
+    service:
+      name: httpd
+      state: started
+    when: ansible_distribution == "Window"  
+
+  - name: Enable Httpd on Centos
+    service:
+      name: httpd
+      enabled: yes 
+    when: ansible_distribution == "Window" 
 ...          
