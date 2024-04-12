@@ -59,20 +59,20 @@
     when: ansible_distribution == "centos" 
 
   - name: Install HTTPD on Window
-    win:
-      name: httpd
+    win_package:
+      product_id: httpd
       state: present
     when: ansible_distribution == "Window" 
 
-  - name: Start Httpd on Centos
+  - name: Start Httpd on Window
     service:
-      name: httpd
+      product_id: httpd
       state: started
     when: ansible_distribution == "Window"  
 
-  - name: Enable Httpd on Centos
+  - name: Enable Httpd on Window
     service:
-      name: httpd
+      product_id: httpd
       enabled: yes 
     when: ansible_distribution == "Window" 
 ...          
